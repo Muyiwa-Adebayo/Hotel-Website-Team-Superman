@@ -37,7 +37,9 @@
    font-family: "Montserrat", sans-serif;
    color: white;
    text-align: center;
-   width: 90%;
+   width: 99%;
+   padding-right: 30px;
+   padding-left: 30px;
 }
 
 .header__nav h4 {
@@ -284,7 +286,7 @@
    background: rgb(228, 226, 226);
 }
 
-.footer__social i:not(:last-child) {
+.footer__social a:not(:last-child) {
    margin-right: 65px;
 }
 
@@ -335,8 +337,8 @@
       height: 650px;
    }
 
-   .footer__social i {
-      margin-right: 5px !important;
+   .footer__social a:not(:last-child) {
+      margin-right: 30px !important;
       margin-bottom: 10px;
    }
 
@@ -357,6 +359,12 @@
       width: 130px;
       padding: 0;
       font-size: 25px;
+   }
+}
+
+@media (max-width: 410px) {
+   .footer__social a:not(:last-child) {
+      margin-right: 5px !important;
    }
 }
 
