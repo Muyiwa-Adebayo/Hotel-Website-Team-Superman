@@ -16,6 +16,7 @@
    background-size: cover;
    width: 100%;
    padding: 40px 47px;
+   z-index: 50;
 }
 
 .header h1 {
@@ -40,6 +41,7 @@
    width: 99%;
    padding-right: 30px;
    padding-left: 30px;
+   align-items: center;
 }
 
 .header__nav h4 {
@@ -51,7 +53,22 @@
    padding: 5px;
 }
 
-.header__nav ul {
+.header__nav .hamburger {
+   text-align: right;
+   justify-self: flex-end;
+   width: calc(100% - 90px);
+   display: none;
+}
+
+.header__nav .hamburger i {
+   font-size: 36px;
+}
+
+.header__nav .hamburger .close-nav {
+   display: none;
+}
+
+.header__nav .header__nav-links {
    width: calc(100% - 90px);
    list-style: none;
    display: flex;
@@ -59,11 +76,11 @@
    align-items: center;
 }
 
-.header__nav ul li:not(:last-child) {
+.header__nav .header__nav-links li:not(:last-child) {
    margin-right: 12px;
 }
 
-.header__nav ul li a {
+.header__nav .header__nav-links li a {
    display: inline-block;
    color: white;
    text-decoration: none;
@@ -71,7 +88,7 @@
    font-size: 16px;
 }
 
-.header__nav ul li a:hover {
+.header__nav .header__nav-links li a:hover {
    color: rgb(236, 227, 227);
    transition: all 0.3s ease;
    -webkit-transition: all 0.3s ease;
@@ -205,6 +222,8 @@
    padding-bottom: 170px;
    color: white;
    font-family: "Montserrat", sans-serif;
+   position: relative;
+   z-index: 10;
 }
 
 .footer h4 {
@@ -300,30 +319,49 @@
 }
 
 /* MEDIA QUERIES */
-@media (max-width: 590px) {
+@media (max-width: 610px) {
    .header {
       padding: 5px;
    }
 
-   .header__nav {
-      flex-direction: column;
+   .header__nav .hamburger {
+      display: inline-block;
    }
 
    .header__nav h4 {
       margin-right: 0;
       margin: auto;
-      margin-bottom: 20px;
    }
 
-   .header__nav ul {
-      margin-top: 15px;
-      flex-wrap: wrap;
+   .header__nav .header__nav-links {
+      display: inline-block;
+      background: #cc8644;
       text-align: center;
-      justify-content: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 100vh;
+      padding-top: 50px;
+      min-height: 100vh;
+      visibility: hidden;
+      left: -200px;
    }
 
-   .header__nav ul {
+   .header__nav .header__nav-links li {
+      display: inline-block;
       width: 100%;
+      margin: 0;
+      padding: 20px 2px;
+   }
+
+   .header__nav .header__nav-links li:hover {
+      background: black;
+      transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
    }
 }
 
