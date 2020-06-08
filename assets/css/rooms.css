@@ -1,3 +1,4 @@
+/* HEADING STYLING */
 .header {
    display: flex;
    flex-direction: column;
@@ -31,19 +32,18 @@
 .header__nav {
    position: absolute;
    top: 25px;
-   align-items: center;
    display: flex;
    z-index: 2;
    font-family: "Montserrat", sans-serif;
    color: white;
    text-align: center;
+   width: 90%;
 }
 
 .header__nav h4 {
    width: 90px;
    display: inline-block;
    margin-right: 10px;
-   font-family: "Montserrat", sans-serif;
    font-weight: 900;
    border: 4px solid #ffffff;
    padding: 5px;
@@ -53,11 +53,12 @@
    width: calc(100% - 90px);
    list-style: none;
    display: flex;
+   justify-content: flex-end;
    align-items: center;
 }
 
 .header__nav ul li:not(:last-child) {
-   margin-right: 18px;
+   margin-right: 12px;
 }
 
 .header__nav ul li a {
@@ -77,6 +78,7 @@
    -o-transition: all 0.3s ease;
 }
 
+/* GALLERY STYLING */
 .gallery {
    background: white;
    width: 100%;
@@ -118,6 +120,7 @@
    z-index: 30;
 }
 
+/* UTILITIES STYLING */
 .border-bottom {
    display: inline-block;
    border: 4px solid #cc8655;
@@ -133,6 +136,7 @@
    margin-bottom: 67px !important;
 }
 
+/* BANNER STYLING */
 .banner {
    display: flex;
    flex-direction: column;
@@ -184,6 +188,7 @@
    background: #c07f50;
 }
 
+/* FOOTER STYLING */
 .footer {
    width: 100%;
    height: 450px;
@@ -253,6 +258,10 @@
    margin-top: 35px;
 }
 
+.footer__social a {
+   text-decoration: none;
+}
+
 .footer__social i {
    color: #cc8644;
    position: relative;
@@ -296,6 +305,12 @@
 
    .header__nav {
       flex-direction: column;
+   }
+
+   .header__nav h4 {
+      margin-right: 0;
+      margin: auto;
+      margin-bottom: 20px;
    }
 
    .header__nav ul {
@@ -348,5 +363,9 @@
 @media (max-width: 320px) {
    h1 {
       font-size: 3rem !important;
+   }
+
+   h2 {
+      font-size: 1.8rem !important;
    }
 }
