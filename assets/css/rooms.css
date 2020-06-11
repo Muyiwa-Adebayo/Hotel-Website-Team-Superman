@@ -51,6 +51,7 @@
    font-weight: 900;
    border: 4px solid #ffffff;
    padding: 5px;
+   font-size: 24px;
 }
 
 .header__nav .hamburger {
@@ -97,6 +98,10 @@
    -o-transition: all 0.3s ease;
 }
 
+.active-link {
+   border-bottom: 4px solid white;
+}
+
 /* GALLERY STYLING */
 .gallery {
    background: white;
@@ -123,7 +128,7 @@
 
 .gallery__header .bold {
    font-weight: bold;
-   margin-top: -12px;
+   margin-top: -10px;
 }
 
 .gallery p {
@@ -160,7 +165,7 @@
    display: flex;
    flex-direction: column;
    position: relative;
-   height: 380px;
+   height: 400px;
    align-items: center;
    justify-content: center;
    text-align: center;
@@ -184,11 +189,31 @@
 }
 
 .banner p {
+   position: relative;
    font-family: "Cardo", serif;
    font-style: italic;
    font-weight: normal;
    font-size: 1.8rem;
+   z-index: 5;
    color: #ffffff;
+   width: 450px;
+   height: 75px;
+}
+
+.banner p::before {
+   content: "";
+   background-color: white;
+   height: 5px;
+   width: 70px;
+   z-index: 6;
+   position: absolute;
+   bottom: 0;
+   left: 45%;
+   transform: translate3d(0%, -50%, 0);
+   -webkit-transform: translate3d(0%, -50%, 0);
+   -moz-transform: translate3d(0%, -50%, 0);
+   -ms-transform: translate3d(0%, -50%, 0);
+   -o-transform: translate3d(0%, -50%, 0);
 }
 
 .banner button {
@@ -201,6 +226,7 @@
    border: 2px solid #e4975f;
    font-weight: bold;
    font-size: 1.7rem;
+   margin-top: 50px;
 }
 
 .banner button:hover {
@@ -368,7 +394,6 @@
 @media (max-width: 540px) {
    .banner button {
       font-size: 24px;
-      width: 90%;
    }
 
    .footer {
@@ -391,6 +416,13 @@
    }
 }
 
+@media (max-width: 501px) {
+   .banner p {
+      width: 90%;
+      height: 110px;
+   }
+}
+
 @media (max-width: 455px) {
    .gallery p {
       left: 5px;
@@ -407,6 +439,18 @@
 }
 
 @media (max-width: 320px) {
+   .banner p {
+      height: 150px;
+   }
+
+   .banner p::before {
+      left: 35%;
+   }
+
+   .banner button {
+      width: 90%;
+   }
+
    h1 {
       font-size: 3rem !important;
    }
