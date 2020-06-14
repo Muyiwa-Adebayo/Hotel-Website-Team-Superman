@@ -11,23 +11,51 @@
          rgba(57, 40, 32, 0.4),
          rgba(57, 40, 32, 0.4)
       ),
-      url(../img/hero.jpg);
+      url(../img/home/home-bg.jpg);
    background-position: top center;
    background-size: cover;
    width: 100%;
    padding: 40px 47px;
-   z-index: 50;
+   z-index: 20;
+   color: #ffffff;
 }
 
-.header h1 {
-   font-family: "Montserrat", sans-serif;
+.header__body {
+   width: 100%;
+   font-family: "Cardo", serif;
+   text-align: left;
+   padding: 70px 0;
+   padding-bottom: 0;
+}
+
+.header__body h1 {
    width: 100%;
    font-style: normal;
    font-weight: 900;
    font-size: 4rem;
-   text-align: center;
    padding: 2px;
+}
+
+.header__body p {
+   width: 564px;
+   font-weight: bold;
+   font-size: 1.8rem;
+}
+
+.header__body button {
    color: #ffffff;
+   display: inline-block;
+   background: #cc8655;
+   font-family: "Cardo", serif;
+   border: 2px solid #e4975f;
+   font-weight: bold;
+   font-size: 1.6rem;
+   padding: 15px 23px;
+   margin-top: 30px;
+}
+
+.header__body button:hover {
+   background: #c07f50;
 }
 
 .header__nav {
@@ -102,62 +130,179 @@
    border-bottom: 4px solid white;
 }
 
-/* GALLERY STYLING */
-.gallery {
-   background: white;
-   width: 100%;
-   margin-top: 79px;
-   margin-bottom: 79px;
-}
-
-.gallery__header {
-   width: 100%;
-   padding: 10px;
+/* FEATURED ROOM STYLING */
+.featured-room {
+   position: relative;
+   top: -40px;
+   width: 99%;
+   z-index: 22;
+   padding: 2px 35px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   color: white;
    text-align: center;
 }
 
-.gallery__header h2 {
-   font-family: "Montserrat", sans-serif;
-   font-size: 2rem;
-   color: #cc8644;
+.featured-room__special,
+.featured-room__pool,
+.featured-room__dining {
+   position: relative;
+   width: 33%;
+   height: 320px;
+   padding-left: 8px;
+   padding-right: 8px;
+   margin-bottom: 20px;
+   overflow: hidden;
 }
 
-.gallery__header .light {
-   font-weight: 100;
+.featured-room img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
 }
 
-.gallery__header .bold {
-   font-weight: bold;
-   margin-top: -10px;
-}
-
-.gallery p {
-   color: white;
-   background-color: #cc8644;
-   position: absolute;
-   bottom: 10px;
-   right: 10px;
-   font-family: "Cardo", serif;
-   padding: 1px 5px;
+.featured-room p {
    font-weight: bold;
    font-size: 1.8rem;
-   z-index: 30;
+   margin-top: -60px;
+   position: relative;
+   z-index: 11;
 }
 
-/* UTILITIES STYLING */
+.about {
+   font-family: "Cardo", serif;
+   padding: 50px 30px;
+   width: 99%;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   justify-content: center;
+   margin: auto;
+   gap: 10px;
+   grid-gap: 10px;
+}
+
+.about__text {
+   display: grid;
+}
+
+.about__text-header {
+   text-align: center;
+   width: 250px;
+   height: 100px;
+   margin: 0;
+}
+
 .border-bottom {
    display: inline-block;
-   border: 4px solid #cc8655;
+   border: 3px solid #cc8655;
    width: 70px;
 }
 
-.mright {
-   margin-right: 10px;
+.about__image img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
 }
 
-.mt-mb {
-   margin-top: 67px !important;
-   margin-bottom: 67px !important;
+.about .light {
+   display: block;
+   font-weight: 200;
+}
+
+.about .bold {
+   display: block;
+   margin-top: -12px;
+}
+
+.about h2 {
+   font-size: 2rem;
+   font-weight: bold;
+   color: #cc8644;
+   margin-bottom: 10px;
+   text-align: left;
+}
+
+.about p {
+   font-size: 1.2rem;
+   padding-top: 10px;
+   padding-bottom: 20px;
+   padding-right: 10px;
+}
+
+.learn-more-btn {
+   color: #ffffff;
+   display: inline-block;
+   background: #cc8655;
+   border: 2px solid #e4975f;
+   font-weight: bold;
+   font-size: 1.5rem;
+   padding: 1px 5px;
+   height: 58px;
+   width: 180px;
+   align-self: end;
+   margin: 0;
+}
+
+.learn-more-btn:hover {
+   background: #c07f50;
+}
+
+.room-suite {
+   background: #f1f1f1;
+   padding: 50px 30px;
+   color: white;
+   width: 100%;
+   text-align: center;
+   position: relative;
+   font-family: "Montserrat", sans-serif;
+}
+
+.room-suite__header {
+   margin-bottom: 20px;
+}
+
+.room-suite h2 {
+   font-size: 2rem;
+   font-weight: bold;
+   color: #cc8644;
+   margin-bottom: 10px;
+   text-align: left;
+   text-align: center;
+}
+
+.room-suite__text {
+   font-size: 1.2rem;
+   padding: 5px;
+   color: #cc8644;
+   width: 579px;
+   margin: auto;
+}
+
+.room-suite__gallery {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   justify-content: center;
+   margin: auto;
+   gap: 10px;
+   grid-gap: 10px;
+}
+
+.room-suite__gallery img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.room-suite__gallery p {
+   font-weight: bold;
+   font-size: 1.8rem;
+   margin-top: -60px;
+}
+
+.room-suite button {
+   margin-top: 50px;
 }
 
 /* BANNER STYLING */
@@ -174,7 +319,7 @@
          rgba(57, 40, 32, 0.4),
          rgba(57, 40, 32, 0.4)
       ),
-      url(../img/banner.png);
+      url(../img/rooms/banner.jpg);
    background-position: top center;
    background-size: cover;
    width: 100%;
@@ -186,21 +331,13 @@
    font-weight: bold;
    font-size: 2rem;
    color: #ffffff;
-}
-
-.banner p {
-   position: relative;
-   font-family: "Cardo", serif;
-   font-style: italic;
-   font-weight: normal;
-   font-size: 1.8rem;
-   z-index: 5;
-   color: #ffffff;
-   width: 450px;
+   width: 100%;
    height: 75px;
+   position: relative;
+   z-index: 5;
 }
 
-.banner p::before {
+.banner h2::before {
    content: "";
    background-color: white;
    height: 5px;
@@ -214,6 +351,26 @@
    -moz-transform: translate3d(0%, -50%, 0);
    -ms-transform: translate3d(0%, -50%, 0);
    -o-transform: translate3d(0%, -50%, 0);
+}
+
+.banner form {
+   width: 80%;
+   margin-top: 20px;
+}
+
+.banner form input {
+   width: 100%;
+   height: 60px;
+   padding: 2px 10px;
+   font-size: 24px;
+   background: #f1f1f1;
+   border: 1px solid #cc8644;
+   box-sizing: border-box;
+}
+
+.banner form input:focus {
+   outline: none;
+   border: none;
 }
 
 .banner button {
@@ -345,7 +502,57 @@
 }
 
 /* MEDIA QUERIES */
-@media (max-width: 610px) {
+@media (max-width: 950px) {
+   .about {
+      grid-template-columns: 1fr;
+      row-gap: 20px;
+   }
+
+   .about__text-header {
+      margin-bottom: 10px;
+   }
+}
+
+@media (max-width: 860px) {
+   .room-suite__gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 30px;
+   }
+}
+
+@media (max-width: 800px) {
+   .featured-room {
+      width: 100%;
+      padding: 5px 10px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+   }
+
+   .featured-room__special,
+   .featured-room__pool,
+   .featured-room__dining {
+      width: 100%;
+   }
+
+   .featured-room__dining {
+      grid-column: 1 / -1;
+   }
+}
+
+@media (max-width: 670px) {
+   .featured-room {
+      grid-template-columns: 1fr;
+   }
+}
+
+@media (max-width: 615px) {
+   .room-suite__text {
+      width: 95%;
+   }
+}
+
+@media (max-width: 615px) {
    .header {
       padding: 5px;
    }
@@ -389,6 +596,35 @@
       -ms-transition: all 0.3s ease;
       -o-transition: all 0.3s ease;
    }
+
+   .featured-room {
+      top: 0 !important;
+      z-index: 15;
+   }
+}
+
+@media (max-width: 593px) {
+   .banner h2 {
+      height: 100px;
+   }
+}
+
+@media (max-width: 580px) {
+   .header h1 {
+      font-size: 3rem;
+      line-height: 40px;
+      margin-bottom: 8px;
+   }
+
+   .header__body {
+      padding-left: 5px;
+      padding-right: 5px;
+   }
+
+   .header__body p {
+      width: 99%;
+      font-size: 1.4rem;
+   }
 }
 
 @media (max-width: 540px) {
@@ -416,19 +652,10 @@
    }
 }
 
-@media (max-width: 501px) {
-   .banner p {
-      width: 90%;
-      height: 110px;
-   }
-}
-
-@media (max-width: 455px) {
-   .gallery p {
-      left: 5px;
-      width: 130px;
-      padding: 0;
-      font-size: 25px;
+@media (max-width: 500px) {
+   .room-suite__gallery {
+      display: grid;
+      grid-template-columns: 1fr;
    }
 }
 
@@ -436,15 +663,26 @@
    .footer__social a:not(:last-child) {
       margin-right: 5px !important;
    }
+
+   .banner form {
+      width: 100%;
+   }
+}
+
+@media (max-width: 334px) {
+   .banner h2 {
+      height: 120px;
+   }
+
+   .banner h2::before {
+      left: 35%;
+   }
 }
 
 @media (max-width: 320px) {
-   .banner p {
-      height: 150px;
-   }
-
-   .banner p::before {
-      left: 35%;
+   .about__text-header {
+      width: 100%;
+      margin-bottom: 30px;
    }
 
    .banner button {
